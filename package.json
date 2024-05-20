@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.24.4",
+    "@embroider/macros": "^1.8.0",
+    "@embroider/util": "^1.12.0",
     "ember-cli-babel": "^8.2.0",
     "ember-cli-htmlbars": "^6.3.0"
   },
