@@ -1,0 +1,10 @@
+<div ...attributes class="toast-header">
+  <strong class="me-auto">{{@options.title}}</strong>
+  {{#if @options.messageSecondary}}
+    <small class="text-body-secondary">{{@options.messageSecondary}}</small>
+  {{/if}}
+  {{#if @options.isClosable}}
+    <Toasts::Base::Close @options={{@options}} @onClose={{@onClose}} />
+  {{/if}}
+  {{yield}}
+</div>

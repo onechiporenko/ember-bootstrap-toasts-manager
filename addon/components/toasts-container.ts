@@ -8,6 +8,7 @@ export interface ToastsContainerSignature {
   // The arguments accepted by the component
   Args: {
     messagesNumberToShow: number;
+    reverseOrder?: boolean;
   };
   // Any blocks yielded by the component
   Blocks: {

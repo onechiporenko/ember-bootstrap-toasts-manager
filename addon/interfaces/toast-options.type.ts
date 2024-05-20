@@ -1,5 +1,8 @@
 export interface ToastOptions {
-  title: string;
+  title?: string;
   message?: string;
   messageSecondary?: string;
+  isClosable?: boolean;
+  showHeader?: boolean;
+  showBody?: boolean;
 }

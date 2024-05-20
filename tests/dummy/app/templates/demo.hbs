@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Toast settings</h5>
+  </div>
+  <div class="card-body">
+    <BsForm
+      @formLayout="vertical"
+      @model={{this}}
+      as |form|>
+      <form.element @controlType="number" @label="Number of messages to show" @property="messagesNumberToShow" />
+      <form.element @controlType="checkbox" @label="Reverse messages order" @property="reverseOrder" />
+      <form.element @controlType="checkbox" @label="Show header" @property="showHeader" />
+      <fieldset disabled={{not this.showHeader}}>
+        <form.element @label="Title (counter will be added for demo purposes)" @property="title" />
+        <form.element @label="Secondary Message" @property="messageSecondary" />
+      </fieldset>
+      <form.element @controlType="checkbox" @label="Show body" @property="showBody" />
+      <fieldset disabled={{not this.showBody}}>
+        <form.element @label="Message" @property="message" />
+      </fieldset>
+      <form.element @controlType="checkbox" @label="Toast is closable" @property="isClosable" />
+    </BsForm>
+    <BsButton @onClick={{this.showToast}}>Show toast</BsButton>
+  </div>
+</div>
+{{outlet}}
+<ToastsContainer @messagesNumberToShow={{this.messagesNumberToShow}} @reverseOrder={{this.reverseOrder}} />

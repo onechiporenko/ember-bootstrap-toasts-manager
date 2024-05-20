@@ -17,6 +17,14 @@ export interface ToastsBaseSignature {
 }
 
 export default class ToastsBaseComponent extends Component<ToastsBaseSignature> {
+  get showHeader(): boolean {
+    return this.args.options.showHeader ?? true;
+  }
+
+  get showBody(): boolean {
+    return this.args.options.showBody ?? true;
+  }
+
   @action
   onClose(): void {
     this.args.onClose?.();
