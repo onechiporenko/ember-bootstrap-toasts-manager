@@ -11,6 +11,11 @@ module.exports = function (defaults) {
       bootstrapVersion: 5,
       importBootstrapCSS: true,
     },
+
+    'ember-prism': {
+      theme: 'tomorrow',
+      components: ['typescript', 'markup-templating'],
+    },
   });
 
   /*

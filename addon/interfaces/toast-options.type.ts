@@ -5,4 +5,5 @@ export interface ToastOptions {
   isClosable?: boolean;
   showHeader?: boolean;
   showBody?: boolean;
+  hideToastTimeout?: number;
 }

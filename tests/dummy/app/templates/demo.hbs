@@ -1,14 +1,60 @@
-<div class="card">
-  <div class="card-header">
-    <h5>Toast settings</h5>
+{{page-title "Ember Bootstrap Toasts Manager"}}
+<h2>Install</h2>
+<div class="alert alert-info">
+  <span class="font-monospace">ember i ember-bootstrap-toasts-manager</span>
+</div>
+<h2>Setup</h2>
+<div class="alert alert-secondary">
+<pre class="mb-0">// app/templates/application.hbs
+&lt;ToastsContainer class="p-3" /&gt;</pre>
+</div>
+<h2>Usage</h2>
+<div class="alert alert-secondary">
+<pre class="mb-0">
+// app/controllers/application.ts
+import Controller from '@ember/controller';
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
+import ToastsManager from 'ember-bootstrap-toasts-manager/services/toasts-manager';
+
+export default class ApplicationController extends Controller {
+  @service toastsManager!: ToastsManager;
+
+  @action
+  showToast() {
+    this.toastsManager.showBaseToast({
+      title: 'Hello',
+      message: 'This is a toast message',
+    });
+  }
+}
+</pre>
+</div>
+
+<h2>Demo</h2>
+<BsForm
+  @formLayout="horizontal"
+  @model={{this}}
+  as |form|>
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5>Toasts container settings</h5>
+    </div>
+    <div class="card-body">
+      <form.element @controlType="switch" @property="isLight" {{on "change" this.applySelectedTheme}} />
+      <fieldset>
+        <form.element @controlType="number" @label="Number of messages to show" @property="messagesNumberToShow" />
+        <form.element @controlType="checkbox" @label="Reverse messages order" @property="reverseOrder" />
+        <form.element @controlType="number" @label="Time while toast is shown" @property="hideToastTimeout" />
+        <form.element @controlType="radio" @label="Toast placement" @property="placement" @options={{this.placementOptions}} />
+      </fieldset>
+    </div>
   </div>
-  <div class="card-body">
-    <BsForm
-      @formLayout="vertical"
-      @model={{this}}
-      as |form|>
-      <form.element @controlType="number" @label="Number of messages to show" @property="messagesNumberToShow" />
-      <form.element @controlType="checkbox" @label="Reverse messages order" @property="reverseOrder" />
+  <div class="card">
+    <div class="card-header">
+      <h5>Toast settings</h5>
+    </div>
+    <div class="card-body">
       <form.element @controlType="checkbox" @label="Show header" @property="showHeader" />
       <fieldset disabled={{not this.showHeader}}>
         <form.element @label="Title (counter will be added for demo purposes)" @property="title" />
@@ -19,9 +65,9 @@
         <form.element @label="Message" @property="message" />
       </fieldset>
       <form.element @controlType="checkbox" @label="Toast is closable" @property="isClosable" />
-    </BsForm>
-    <BsButton @onClick={{this.showToast}}>Show toast</BsButton>
+      <BsButton @onClick={{this.showToast}}>Show toast</BsButton>
+    </div>
   </div>
-</div>
+</BsForm>
 {{outlet}}
-<ToastsContainer @messagesNumberToShow={{this.messagesNumberToShow}} @reverseOrder={{this.reverseOrder}} />
+<ToastsContainer class="p-3" @messagesNumberToShow={{this.messagesNumberToShow}} @reverseOrder={{this.reverseOrder}} @placement={{this.placement}} />

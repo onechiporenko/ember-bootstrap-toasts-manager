@@ -5,6 +5,8 @@ import type ToastsManagerService from 'ember-bootstrap-toasts-manager/services/t
 import { service } from '@ember/service';
 
 export default class DemoController extends Controller {
+  @service('-document') declare dom: Document;
+
   @tracked messagesNumberToShow = 3;
   @tracked reverseOrder = false;
 
@@ -14,6 +16,11 @@ export default class DemoController extends Controller {
   @tracked isClosable = true;
   @tracked showHeader = true;
   @tracked showBody = true;
+  @tracked hideToastTimeout = 3000;
+  @tracked placement = 'bottom-right';
+  @tracked isLight = false;
+
+  placementOptions = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
 
   @tracked counter = 0;
 
@@ -28,6 +35,16 @@ export default class DemoController extends Controller {
       isClosable: this.isClosable,
       showHeader: this.showHeader,
       showBody: this.showBody,
+      hideToastTimeout: this.hideToastTimeout,
     });
+  }
+
+  @action
+  applySelectedTheme(): void {
+    const selectedTheme = this.isLight ? 'light' : 'dark';
+    this.dom.body.setAttribute('data-bs-theme', selectedTheme);
+    this.dom
+      .querySelector('html')
+      ?.style.setProperty('color-scheme', selectedTheme);
   }
 }
