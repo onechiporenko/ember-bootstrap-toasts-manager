@@ -6,12 +6,12 @@ import { module, test } from 'qunit';
 module('Integration | Helper | ebtm-array-last-n-items', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
+  test('it renders', async function (assert): Promise<void> {
     this.set('inputValue', [1, 2, 3, 4, 5]);
     this.set('n', 3);
 
     await render(hbs`{{ebtm-array-last-n-items this.inputValue this.n}}`);
 
-    assert.dom().hasText('1,2,3');
+    assert.dom().hasText('3,4,5');
   });
 });
