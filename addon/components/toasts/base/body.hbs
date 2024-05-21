@@ -1,4 +1,7 @@
 <div ...attributes class="toast-body">
-  {{@options.message}}
-  {{yield}}
+  {{#if (has-block)}}
+    {{yield}}
+  {{else}}
+    {{@options.message}}
+  {{/if}}
 </div>

@@ -3,6 +3,7 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import type ToastsManagerService from 'ember-bootstrap-toasts-manager/services/toasts-manager';
 import { service } from '@ember/service';
+import CustomToastComponent from 'dummy/components/custom-toast';
 
 export default class DemoController extends Controller {
   @service('-document') declare dom: Document;
@@ -27,7 +28,7 @@ export default class DemoController extends Controller {
   @service declare toastsManager: ToastsManagerService;
 
   @action
-  showToast(): void {
+  showBaseToast(): void {
     this.toastsManager.showBaseToast({
       title: `${this.title} #${++this.counter}`,
       message: this.message,
@@ -35,6 +36,15 @@ export default class DemoController extends Controller {
       isClosable: this.isClosable,
       showHeader: this.showHeader,
       showBody: this.showBody,
+      hideToastTimeout: this.hideToastTimeout,
+    });
+  }
+
+  @action
+  showCustomToast(): void {
+    this.toastsManager.showToast(CustomToastComponent, {
+      message: this.message,
+      isClosable: this.isClosable,
       hideToastTimeout: this.hideToastTimeout,
     });
   }

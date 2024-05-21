@@ -1,12 +1,9 @@
 import Component from '@glimmer/component';
-import type { ToastOptions } from 'ember-bootstrap-toasts-manager/interfaces/toast-options.type';
+import type { ToastsBaseSignature } from 'ember-bootstrap-toasts-manager/components/toasts/base';
 
 export interface ToastsBaseCloseSignature {
   // The arguments accepted by the component
-  Args: {
-    options: ToastOptions;
-    onClose: () => void;
-  };
+  Args: ToastsBaseSignature['Args'];
   // Any blocks yielded by the component
   Blocks: {
     default: [];

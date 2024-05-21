@@ -1,8 +1,19 @@
-<div ...attributes class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-  {{#if this.showHeader}}
-    <Toasts::Base::Header @options={{@options}} @onClose={{this.onClose}} />
-  {{/if}}
-  {{#if this.showBody}}
-    <Toasts::Base::Body @options={{@options}} />
-  {{/if}}
-</div>
+{{#let (hash
+  header=(component (ensure-safe-component this.header) options=@options onClose=this.onClose)
+  body=(component (ensure-safe-component this.body) options=@options onClose=this.onClose)
+  close=(component (ensure-safe-component this.close) options=@options onClose=this.onClose)
+  options=@options
+) as |opt|}}
+  <div ...attributes class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+    {{#if (has-block)}}
+      {{yield opt}}
+    {{else}}
+      {{#if this.showHeader}}
+        <opt.header />
+      {{/if}}
+      {{#if this.showBody}}
+        <opt.body />
+      {{/if}}
+    {{/if}}
+  </div>
+{{/let}}

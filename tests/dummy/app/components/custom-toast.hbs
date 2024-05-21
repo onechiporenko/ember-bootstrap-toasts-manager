@@ -1,0 +1,7 @@
+<Toasts::Base @options={{@options}} @onClose={{@onClose}} as |Toast|>
+  <Toast.body class="d-flex justify-content-between">
+    {{@options.message}}
+    <Toast.close />
+  </Toast.body>
+</Toasts::Base>
+{{yield}}

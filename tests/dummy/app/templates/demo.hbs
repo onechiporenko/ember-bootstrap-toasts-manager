@@ -65,7 +65,8 @@ export default class ApplicationController extends Controller {
         <form.element @label="Message" @property="message" />
       </fieldset>
       <form.element @controlType="checkbox" @label="Toast is closable" @property="isClosable" />
-      <BsButton @onClick={{this.showToast}}>Show toast</BsButton>
+      <BsButton @onClick={{this.showBaseToast}}>Show base toast</BsButton>
+      <BsButton @onClick={{this.showCustomToast}}>Show custom toast</BsButton>
     </div>
   </div>
 </BsForm>
