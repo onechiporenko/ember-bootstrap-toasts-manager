@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
-    locationType: 'history',
+    locationType: 'hash',
     EmberENV: {
       EXTEND_PROTOTYPES: false,
       FEATURES: {
@@ -41,7 +41,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.rootURL = '/ember-bootstrap-toasts-manager/';
   }
 
   return ENV;
