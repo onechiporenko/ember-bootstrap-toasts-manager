@@ -55,6 +55,6 @@ Check `components/toasts/base` for an example of toast component. Also check [Bo
 * `ember-bootstrap@6`
 * `bootstrap@5`
 
-## Demo and docs
+## Demo
 
 Check [demo-page](https://onechiporenko.github.io/ember-bootstrap-toasts-manager/#/demo)
