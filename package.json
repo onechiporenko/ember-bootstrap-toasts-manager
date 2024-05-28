@@ -1,11 +1,13 @@
 {
   "name": "ember-bootstrap-toasts-manager",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember-addon that provides a simple mechanism for interaction with user using toasts.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-bootstrap",
+    "toasts"
   ],
-  "repository": "",
+  "repository": "https://github.com/onechiporenko/ember-bootstrap-toasts-manager",
   "license": "MIT",
   "author": "Oleg Nechiporenko",
   "typesVersions": {
