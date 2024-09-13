@@ -12,10 +12,10 @@ importers:
         specifier: ^7.25.2
         version: 7.25.2
       '@embroider/macros':
-        specifier: ^1.8.0
+        specifier: ^1.16.6
         version: 1.16.6(@glint/template@1.4.0)
       '@embroider/util':
-        specifier: ^1.12.0
+        specifier: ^1.13.2
         version: 1.13.2(@glint/environment-ember-loose@1.4.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.25.2))(@types/ember__component@4.0.22(@babel/core@7.25.2))(@types/ember__controller@4.0.12(@babel/core@7.25.2))(@types/ember__object@4.0.12(@babel/core@7.25.2))(@types/ember__routing@4.0.22(@babel/core@7.25.2))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.2.0(@babel/core@7.25.2)(ember-source@5.11.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.94.0))))(@glint/template@1.4.0)(ember-source@5.11.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.94.0))
       ember-cli-babel:
         specifier: ^8.2.0
@@ -61,7 +61,7 @@ importers:
         specifier: ^1.4.0
         version: 1.4.0
       '@tsconfig/ember':
-        specifier: ^3.0.6
+        specifier: ^3.0.8
         version: 3.0.8
       '@types/ember':
         specifier: ^4.0.11
@@ -91,7 +91,7 @@ importers:
         specifier: ^4.0.6
         version: 4.0.6
       '@types/ember__helper':
-        specifier: ^4.0.7
+        specifier: ^4.0.8
         version: 4.0.8(@babel/core@7.25.2)
       '@types/ember__modifier':
         specifier: ^4.0.9
@@ -133,13 +133,13 @@ importers:
         specifier: ^4.0.9
         version: 4.0.9
       '@typescript-eslint/eslint-plugin':
-        specifier: ^7.0.0
+        specifier: ^7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.6.2))(eslint@8.57.0)(typescript@5.6.2)
       '@typescript-eslint/parser':
-        specifier: ^7.0.0
+        specifier: ^7.18.0
         version: 7.18.0(eslint@8.57.0)(typescript@5.6.2)
       bootstrap:
-        specifier: ^5.0.0
+        specifier: ^5.3.3
         version: 5.3.3(@popperjs/core@2.11.8)
       broccoli-asset-rev:
         specifier: ^3.0.0
@@ -151,7 +151,7 @@ importers:
         specifier: ^2.7.4
         version: 2.7.4(@glint/template@1.4.0)(webpack@5.94.0)
       ember-bootstrap:
-        specifier: ^6.1.0
+        specifier: ^6.3.3
         version: 6.3.3(@babel/core@7.25.2)(@ember/string@3.1.1)(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glimmer/tracking@1.1.2)(@glint/environment-ember-loose@1.4.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(@types/ember__array@4.0.10(@babel/core@7.25.2))(@types/ember__component@4.0.22(@babel/core@7.25.2))(@types/ember__controller@4.0.12(@babel/core@7.25.2))(@types/ember__object@4.0.12(@babel/core@7.25.2))(@types/ember__routing@4.0.22(@babel/core@7.25.2))(ember-cli-htmlbars@6.3.0)(ember-modifier@4.2.0(@babel/core@7.25.2)(ember-source@5.11.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.94.0))))(@glint/template@1.4.0)(ember-modifier@4.2.0(@babel/core@7.25.2)(ember-source@5.11.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.94.0)))(ember-source@5.11.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.94.0))(webpack@5.94.0)
       ember-cli:
         specifier: ~5.11.0
@@ -208,16 +208,16 @@ importers:
         specifier: ^11.12.0
         version: 11.12.0(eslint@8.57.0)
       eslint-plugin-n:
-        specifier: ^17.0.0
+        specifier: ^17.10.2
         version: 17.10.2(eslint@8.57.0)
       eslint-plugin-prettier:
         specifier: ^5.2.1
         version: 5.2.1(@types/eslint@8.56.12)(eslint-config-prettier@9.1.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.3.3)
       eslint-plugin-qunit:
-        specifier: ^8.1.1
+        specifier: ^8.1.2
         version: 8.1.2(eslint@8.57.0)
       eslint-plugin-simple-import-sort:
-        specifier: ^12.1.0
+        specifier: ^12.1.1
         version: 12.1.1(eslint@8.57.0)
       loader.js:
         specifier: ^4.7.0
@@ -229,25 +229,25 @@ importers:
         specifier: ^2.22.0
         version: 2.22.0
       qunit-dom:
-        specifier: ^3.0.0
+        specifier: ^3.2.0
         version: 3.2.0
       rimraf:
-        specifier: ^5.0.1
+        specifier: ^5.0.10
         version: 5.0.10
       stylelint:
-        specifier: ^16.0.0
+        specifier: ^16.9.0
         version: 16.9.0(typescript@5.6.2)
       stylelint-config-standard:
-        specifier: ^36.0.0
+        specifier: ^36.0.1
         version: 36.0.1(stylelint@16.9.0(typescript@5.6.2))
       stylelint-prettier:
-        specifier: ^5.0.0
+        specifier: ^5.0.2
         version: 5.0.2(prettier@3.3.3)(stylelint@16.9.0(typescript@5.6.2))
       typescript:
-        specifier: ^5.4.5
+        specifier: ^5.6.2
         version: 5.6.2
       webpack:
-        specifier: ^5.93.0
+        specifier: ^5.94.0
         version: 5.94.0
 
 packages:
@@ -3402,10 +3402,10 @@ packages:
     resolution: {integrity: sha512-YyZM99iHrqLKjmt4LJDj58KI+fYyufRLBSYcqycxf//KpBk9FoewoGX0450m9nB44qrZnovzC2oeP5hUibxc/g==}
     engines: {node: '>=18'}
 
-  find-pnpm-workspace-root@1.2.1:
+  find-yarn-workspace-root@1.2.1:
     resolution: {integrity: sha512-dVtfb0WuQG+8Ag2uWkbG79hOUzEsRrhBzgfn86g2sJPkzmcpGdghbNTfUKGTxymFrY/tLIodDzLoW9nOJ4FY8Q==}
 
-  find-pnpm-workspace-root@2.0.0:
+  find-yarn-workspace-root@2.0.0:
     resolution: {integrity: sha512-1IMnbjt4KzsQfnhnzNd8wUEgXZ44IzZaZmnLYx7D5FZlaHt2gW20Cri8Q+E/t5tIj4+epTBub+2Zxu/vNILzqQ==}
 
   findup-sync@4.0.0:
@@ -9428,7 +9428,7 @@ snapshots:
     dependencies:
       chalk: 2.4.2
       ember-cli: 5.11.0(handlebars@4.7.8)(underscore@1.13.7)
-      find-pnpm-workspace-root: 1.2.1
+      find-yarn-workspace-root: 1.2.1
       is-git-url: 1.0.0
       resolve: 1.22.8
       semver: 5.7.2
@@ -9637,7 +9637,7 @@ snapshots:
       express: 4.21.0
       filesize: 10.1.6
       find-up: 5.0.0
-      find-pnpm-workspace-root: 2.0.0
+      find-yarn-workspace-root: 2.0.0
       fixturify-project: 2.1.1
       fs-extra: 11.2.0
       fs-tree-diff: 2.0.1
@@ -10634,14 +10634,14 @@ snapshots:
       path-exists: 5.0.0
       unicorn-magic: 0.1.0
 
-  find-pnpm-workspace-root@1.2.1:
+  find-yarn-workspace-root@1.2.1:
     dependencies:
       fs-extra: 4.0.3
       micromatch: 3.1.10
     transitivePeerDependencies:
       - supports-color
 
-  find-pnpm-workspace-root@2.0.0:
+  find-yarn-workspace-root@2.0.0:
     dependencies:
       micromatch: 4.0.8
 
