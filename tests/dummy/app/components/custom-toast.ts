@@ -1,4 +1,3 @@
-import Component from '@glimmer/component';
-import type { ToastsBaseSignature } from 'ember-bootstrap-toasts-manager/components/toasts/base';
+import templateOnly from '@ember/component/template-only';
 
-export default class CustomToastComponent extends Component<ToastsBaseSignature> {}
+export default templateOnly();

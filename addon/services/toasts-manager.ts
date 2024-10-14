@@ -1,5 +1,4 @@
 import { A } from '@ember/array';
-import { later } from '@ember/runloop';
 import Service from '@ember/service';
 import type Component from '@glimmer/component';
 import type { ToastOptions } from 'ember-bootstrap-toasts-manager/interfaces/toast-options.type';
@@ -8,6 +7,7 @@ import type { ToastQueueItem } from 'ember-bootstrap-toasts-manager/interfaces/t
 import ToastsBaseComponent, {
   type ToastsBaseSignature,
 } from '../components/toasts/base';
+import { runTask } from 'ember-lifeline';
 
 export default class ToastsManagerService extends Service {
   hideToastTimeout = 3000;
@@ -35,10 +35,9 @@ export default class ToastsManagerService extends Service {
       componentToRender: toastComponent,
     };
     this.messagesQueue.pushObject(messageQueueItem);
-    later(
+    runTask(
       this,
-      this.hideToast,
-      messageQueueItem,
+      () => this.hideToast(messageQueueItem),
       toastOptions.hideToastTimeout ?? this.hideToastTimeout,
     );
   }
