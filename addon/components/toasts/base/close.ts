@@ -12,4 +12,5 @@ export interface ToastsBaseCloseSignature {
   Element: HTMLButtonElement;
 }
 
+// eslint-disable-next-line ember/no-empty-glimmer-component-classes
 export default class ToastsBaseCloseComponent extends Component<ToastsBaseCloseSignature> {}
