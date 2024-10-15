@@ -184,8 +184,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(@glint/template@1.4.0)(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0))(webpack@5.95.0))(@glint/template@1.4.0)(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0))(qunit@2.22.0)
       ember-resolver:
-        specifier: ^12.0.1
-        version: 12.0.1(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0))
+        specifier: ^13.0.0
+        version: 13.0.2(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0))
       ember-source:
         specifier: ~5.12.0
         version: 5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)
@@ -2936,8 +2936,8 @@ packages:
     resolution: {integrity: sha512-MnqGS8BnY3GJ+n5RZVVRqCwKjfXXMr5quKyqNu1vxft8oslOJuZ1f1dOesQouD+6LwD4Y9tWRVKNw+LOqM9ocw==}
     engines: {node: 8.* || >= 10.*}
 
-  ember-resolver@12.0.1:
-    resolution: {integrity: sha512-U+ZBdbEHMhmvcZly1xhZKwqeH5/igjT93p9bbD6x+mQVg7hm4jrsQA4jsxHu3BqgL5MmqOVx0gtAuYEWV1x2MQ==}
+  ember-resolver@13.0.2:
+    resolution: {integrity: sha512-9G8CVjjI4Q6vx2+FYg8YeLu+/fP4eBL/1+qp5bzwtXQ7G3xkg0YRpcufIdsBjf5K2SUStU83qhNH2O6aanf3nw==}
     engines: {node: 14.* || 16.* || >= 18}
     peerDependencies:
       ember-source: ^4.12.0 || >= 5.0.0
@@ -7504,6 +7504,26 @@ snapshots:
     dependencies:
       '@types/node': 22.5.4
 
+  '@types/ember@4.0.11':
+    dependencies:
+      '@types/ember__application': 4.0.11(@babel/core@7.25.2)
+      '@types/ember__array': 4.0.10(@babel/core@7.25.2)
+      '@types/ember__component': 4.0.22(@babel/core@7.25.2)
+      '@types/ember__controller': 4.0.12(@babel/core@7.25.2)
+      '@types/ember__debug': 4.0.8(@babel/core@7.25.2)
+      '@types/ember__engine': 4.0.11(@babel/core@7.25.2)
+      '@types/ember__error': 4.0.6
+      '@types/ember__object': 4.0.12(@babel/core@7.25.2)
+      '@types/ember__polyfills': 4.0.6
+      '@types/ember__routing': 4.0.22(@babel/core@7.25.2)
+      '@types/ember__runloop': 4.0.10
+      '@types/ember__service': 4.0.9(@babel/core@7.25.2)
+      '@types/ember__string': 3.16.3
+      '@types/ember__template': 4.0.7
+      '@types/ember__test': 4.0.6(@babel/core@7.25.2)
+      '@types/ember__utils': 4.0.7
+      '@types/rsvp': 4.0.9
+
   '@types/ember@4.0.11(@babel/core@7.25.2)':
     dependencies:
       '@types/ember__application': 4.0.11(@babel/core@7.25.2)
@@ -7530,7 +7550,7 @@ snapshots:
   '@types/ember__application@4.0.11(@babel/core@7.25.2)':
     dependencies:
       '@glimmer/component': 1.1.2(@babel/core@7.25.2)
-      '@types/ember': 4.0.11(@babel/core@7.25.2)
+      '@types/ember': 4.0.11
       '@types/ember__engine': 4.0.11(@babel/core@7.25.2)
       '@types/ember__object': 4.0.12(@babel/core@7.25.2)
       '@types/ember__owner': 4.0.9
@@ -7621,6 +7641,10 @@ snapshots:
       - '@babel/core'
       - supports-color
 
+  '@types/ember__runloop@4.0.10':
+    dependencies:
+      '@types/ember': 4.0.11
+
   '@types/ember__runloop@4.0.10(@babel/core@7.25.2)':
     dependencies:
       '@types/ember': 4.0.11(@babel/core@7.25.2)
@@ -7647,6 +7671,10 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
+
+  '@types/ember__utils@4.0.7':
+    dependencies:
+      '@types/ember': 4.0.11
 
   '@types/ember__utils@4.0.7(@babel/core@7.25.2)':
     dependencies:
@@ -9827,7 +9855,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-resolver@12.0.1(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)):
+  ember-resolver@13.0.2(ember-source@5.12.0(@glimmer/component@1.1.2(@babel/core@7.25.2))(@glint/template@1.4.0)(rsvp@4.8.5)(webpack@5.95.0)):
     dependencies:
       ember-cli-babel: 7.26.11
     optionalDependencies:
