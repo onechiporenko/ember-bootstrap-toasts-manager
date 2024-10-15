@@ -82,7 +82,7 @@
     "@typescript-eslint/parser": "^7.0.0",
     "bootstrap": "^5.0.0",
     "broccoli-asset-rev": "^3.0.0",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.0",
     "ember-bootstrap": "^6.1.0",
     "ember-cli": "~5.12.0",
     "ember-cli-clean-css": "^3.0.0",
