@@ -1,9 +1,9 @@
 import { action } from '@ember/object';
 import { service } from '@ember/service';
 import Component from '@glimmer/component';
+import type { ToastContainerPlacement } from 'ember-bootstrap-toasts-manager/interfaces/toast-container-placement.type';
 import type { ToastQueueItem } from 'ember-bootstrap-toasts-manager/interfaces/toast-queue-item.type';
 import type ToastsManagerService from 'ember-bootstrap-toasts-manager/services/toasts-manager';
-import type { ToastContainerPlacement } from 'ember-bootstrap-toasts-manager/interfaces/toast-container-placement.type';
 
 export interface ToastsContainerSignature {
   // The arguments accepted by the component

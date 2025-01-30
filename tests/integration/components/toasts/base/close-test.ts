@@ -1,7 +1,7 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'dummy/tests/helpers';
 import { render } from '@ember/test-helpers';
+import { setupRenderingTest } from 'dummy/tests/helpers';
 import { hbs } from 'ember-cli-htmlbars';
+import { module, test } from 'qunit';
 
 module('Integration | Component | toasts/base/close', function (hooks) {
   setupRenderingTest(hooks);

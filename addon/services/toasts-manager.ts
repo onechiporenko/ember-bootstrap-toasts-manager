@@ -3,11 +3,11 @@ import Service from '@ember/service';
 import type Component from '@glimmer/component';
 import type { ToastOptions } from 'ember-bootstrap-toasts-manager/interfaces/toast-options.type';
 import type { ToastQueueItem } from 'ember-bootstrap-toasts-manager/interfaces/toast-queue-item.type';
+import { runTask } from 'ember-lifeline';
 
 import ToastsBaseComponent, {
   type ToastsBaseSignature,
 } from '../components/toasts/base';
-import { runTask } from 'ember-lifeline';
 
 export default class ToastsManagerService extends Service {
   hideToastTimeout = 3000;
