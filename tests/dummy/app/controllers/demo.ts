@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
-import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import type ToastsManagerService from 'ember-bootstrap-toasts-manager/services/toasts-manager';
 import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
 import CustomToastComponent from 'dummy/components/custom-toast';
+import type ToastsManagerService from 'ember-bootstrap-toasts-manager/services/toasts-manager';
 
 export default class DemoController extends Controller {
   @service('-document') declare dom: Document;

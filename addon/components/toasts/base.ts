@@ -1,9 +1,9 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import type { ToastOptions } from 'ember-bootstrap-toasts-manager/interfaces/toast-options.type';
-import ToastsBaseHeaderComponent from 'ember-bootstrap-toasts-manager/components/toasts/base/header';
 import ToastsBaseBodyComponent from 'ember-bootstrap-toasts-manager/components/toasts/base/body';
 import ToastsBaseCloseComponent from 'ember-bootstrap-toasts-manager/components/toasts/base/close';
+import ToastsBaseHeaderComponent from 'ember-bootstrap-toasts-manager/components/toasts/base/header';
+import type { ToastOptions } from 'ember-bootstrap-toasts-manager/interfaces/toast-options.type';
 
 export interface ToastsBaseSignature {
   // The arguments accepted by the component
