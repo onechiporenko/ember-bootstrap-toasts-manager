@@ -79,7 +79,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['tests/**/*-test.{js,gjs}'],
+    files: ['tests/**/*-test.{ts,js,gjs}'],
     plugins: {
       qunit,
     },
@@ -97,9 +97,14 @@ export default tseslint.config(
       '.stylelintrc.js',
       '.template-lintrc.js',
       'ember-cli-build.js',
+      'index.js',
+      'tests/**/config/**/*.js',
     ],
     plugins: {
       n,
+    },
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
     },
 
     languageOptions: {
