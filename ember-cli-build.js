@@ -8,13 +8,9 @@ module.exports = function (defaults) {
     'ember-cli-babel': { enableTypeScriptTransform: true },
 
     'ember-bootstrap': {
+      insertEmberWormholeElementToDom: false,
       bootstrapVersion: 5,
-      importBootstrapCSS: true,
-    },
-
-    'ember-prism': {
-      theme: 'tomorrow',
-      components: ['typescript', 'markup-templating'],
+      importBootstrapCSS: false,
     },
   });
 
