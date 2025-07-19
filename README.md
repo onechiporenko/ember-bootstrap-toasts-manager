@@ -19,10 +19,10 @@ Add next to your `application.hbs`:
 ```
 
 ```typescript
-import Controller from '@ember/controller';
-import { action } from '@ember/object';
-import { inject as service } from '@ember/service';
-import ToastsManager from 'ember-bootstrap-toasts-manager/services/toasts-manager';
+import Controller from "@ember/controller";
+import { action } from "@ember/object";
+import { inject as service } from "@ember/service";
+import ToastsManager from "ember-bootstrap-toasts-manager/services/toasts-manager";
 
 export default class ApplicationController extends Controller {
   @service declare toastsManager: ToastsManager;
@@ -30,8 +30,8 @@ export default class ApplicationController extends Controller {
   @action
   showToast() {
     this.toastsManager.showBaseToast({
-      title: 'Hello',
-      message: 'This is a toast message',
+      title: "Hello",
+      message: "This is a toast message",
     });
   }
 }
@@ -41,8 +41,8 @@ Custom components could be used as well:
 
 ```typescript
 this.toastsManager.showToast(CustomToastComponent, {
-  title: 'Hello',
-  message: 'This is a toast message',
+  title: "Hello",
+  message: "This is a toast message",
 });
 ```
 
@@ -52,8 +52,8 @@ Check `components/toasts/base` for an example of toast component. Also check [Bo
 
 ## Compatibility
 
-* `ember-bootstrap@6`
-* `bootstrap@5`
+- `ember-bootstrap@6`
+- `bootstrap@5`
 
 ## Demo
 

@@ -13,6 +13,7 @@
       "ember-bootstrap-toasts-manager/test-support": ["addon-test-support"],
       "ember-bootstrap-toasts-manager/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
-    }
+    },
+    "types": ["ember-source/types"]
   }
 }

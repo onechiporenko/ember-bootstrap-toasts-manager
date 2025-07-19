@@ -1,6 +1,11 @@
 <div class="position-fixed w-100 {{this.placementClass}}">
   <div ...attributes class="toast-container {{this.placementClass}}">
-    {{#each (ebtm-array-last-n-items this.toastsManager.messagesQueue this.messagesNumberToShow @reverseOrder) as |message|}}
+    {{#each
+      (ebtm-array-last-n-items
+        this.toastsManager.messagesQueue this.messagesNumberToShow @reverseOrder
+      )
+      as |message|
+    }}
       {{component
         (ensure-safe-component message.componentToRender)
         options=message.toastOptions
