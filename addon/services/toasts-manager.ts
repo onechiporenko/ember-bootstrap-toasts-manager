@@ -9,9 +9,11 @@ import ToastsBaseComponent, {
   type ToastsBaseSignature,
 } from '../components/toasts/base';
 
+type EmberArray<T> = ReturnType<typeof A<T>>;
+
 export default class ToastsManagerService extends Service {
   hideToastTimeout = 3000;
-  messagesQueue = A<ToastQueueItem>([]);
+  messagesQueue: EmberArray<ToastQueueItem> = A<ToastQueueItem>([]);
 
   defaultToastOptions: ToastOptions = {
     title: '',
