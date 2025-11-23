@@ -12,6 +12,9 @@
  *     npx eslint --inspect-config
  *
  */
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import babelParser from '@babel/eslint-parser';
 import js from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -20,22 +23,32 @@ import n from 'eslint-plugin-n';
 import qunit from 'eslint-plugin-qunit';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import ts from 'typescript-eslint';
 
-const esmParserOptions = {
-  ecmaFeatures: { modules: true },
-  ecmaVersion: 'latest',
-  requireConfigFile: false,
-  babelOptions: {
-    plugins: [
-      ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
-    ],
+const parserOptions = {
+  esm: {
+    js: {
+      ecmaFeatures: { modules: true },
+      ecmaVersion: 'latest',
+      requireConfigFile: false,
+      babelOptions: {
+        plugins: [
+          [
+            '@babel/plugin-proposal-decorators',
+            { decoratorsBeforeExport: true },
+          ],
+        ],
+      },
+    },
+    ts: {
+      projectService: true,
+      tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
+    },
   },
 };
 
-export default tseslint.config(
+export default ts.config(
   js.configs.recommended,
-  tseslint.configs.recommended,
   ember.configs.base,
   ember.configs.gjs,
   ember.configs.gts,
@@ -71,16 +84,25 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*.{js,ts,tsx}'],
+    files: ['**/*.{js,gjs}'],
     languageOptions: {
-      parserOptions: esmParserOptions,
+      parserOptions: parserOptions.esm.js,
       globals: {
         ...globals.browser,
       },
     },
   },
   {
-    files: ['tests/**/*-test.{ts,js,gjs}'],
+    files: ['**/*.{ts,gts}'],
+    languageOptions: {
+      parser: ember.parser,
+      parserOptions: parserOptions.esm.ts,
+    },
+    extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
+  },
+  {
+    ...qunit.configs.recommended,
+    files: ['tests/**/*-test.{js,gjs,ts,gts}'],
     plugins: {
       qunit,
     },
@@ -89,6 +111,7 @@ export default tseslint.config(
    * CJS node files
    */
   {
+    ...n.configs['flat/recommended-script'],
     files: [
       '**/*.cjs',
       'config/**/*.js',
@@ -100,14 +123,9 @@ export default tseslint.config(
       '.stylelintrc.js',
       '.template-lintrc.js',
       'ember-cli-build.js',
-      'index.js',
-      'tests/**/config/**/*.js',
     ],
     plugins: {
       n,
-    },
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
     },
 
     languageOptions: {
@@ -122,6 +140,7 @@ export default tseslint.config(
    * ESM node files
    */
   {
+    ...n.configs['flat/recommended-module'],
     files: ['**/*.mjs'],
     plugins: {
       n,
@@ -130,7 +149,7 @@ export default tseslint.config(
     languageOptions: {
       sourceType: 'module',
       ecmaVersion: 'latest',
-      parserOptions: esmParserOptions,
+      parserOptions: parserOptions.esm.js,
       globals: {
         ...globals.node,
       },
